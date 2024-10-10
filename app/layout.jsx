@@ -1,4 +1,4 @@
-import MainHeader from '@/app/ui/main-header/main-header';
+import MainHeader from '@/ui/main-header/main-header';
 
 import './globals.css';
 
