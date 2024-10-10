@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import MealsGrid from '@/app/ui/meals/meals-grid';
+import { fetchMeals } from '@/app/lib/data';
 
-export default function MealsPage() {
+export default async function MealsPage() {
+    const meals = await fetchMeals();
+    
     return (
         <>
             <header className={styles.header}>
@@ -17,7 +20,7 @@ export default function MealsPage() {
                 </p>
             </header>
             <main className={styles.main}>
-                <MealsGrid meals={[]} />
+                <MealsGrid meals={meals} />
             </main>
         </>
     );
