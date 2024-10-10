@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
 
+import MealsGrid from '@/ui/meals/meals-grid';
+import { fetchMeals } from '@/lib/data';
 import styles from './page.module.css';
-import MealsGrid from '../ui/meals/meals-grid';
-import { fetchMeals } from '@/app/lib/data';
 
 async function Meals() {
     const meals = await fetchMeals();
