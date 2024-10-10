@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import styles from './page.module.css';
-import ImageSlideshow from "@/app/ui/images/image-slideshow";
+import ImageSlideshow from "@/ui/images/image-slideshow";
 
 export default function Home() {
     return (
