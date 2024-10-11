@@ -27,8 +27,8 @@ export default function CommunityPage() {
                     </li>
                     <li>
                         <Image
-                        src={eventsIcon}
-                        alt="A crowd of people at a cooking event"
+                            src={eventsIcon}
+                            alt="A crowd of people at a cooking event"
                         />
                         <p>Participate in exclusive events</p>
                     </li>
