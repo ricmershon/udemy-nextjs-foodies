@@ -4,6 +4,19 @@ import { notFound } from 'next/navigation';
 import { fetchMeal } from '@/lib/data';
 import styles from './page.module.css';
 
+export async function generateMetadata({ params }) {
+    const meal = fetchMeal(params.mealSlug);
+
+    if (!meal) {
+        notFound();
+    }
+    
+    return {
+        title: meal.title,
+        description: meal.summary
+    };
+};
+
 export default function MealDetailsPage({ params }) {
     const meal = fetchMeal(params.mealSlug);
 
@@ -41,4 +54,4 @@ export default function MealDetailsPage({ params }) {
             </main>
         </>
     );
-}
+};

@@ -5,6 +5,11 @@ import MealsGrid from '@/ui/meals/meals-grid';
 import { fetchMeals } from '@/lib/data';
 import styles from './page.module.css';
 
+export const metadata = {
+    title: 'All Meals',
+    description: 'Browse the delicious meals shared by our community.'
+}
+
 async function Meals() {
     const meals = await fetchMeals();
     return <MealsGrid meals={meals} />
